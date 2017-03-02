@@ -1,0 +1,489 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head><title>
+	Login
+</title>
+    <script type="text/javascript">
+            var appInsights = window.appInsights || function (config) { function i(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, u = document, e = window, o = "script", s = "AuthenticatedUserContext", h = "start", c = "stop", l = "Track", a = l + "Event", v = l + "Page", y = u.createElement(o), r, f; y.src = config.url || "https://az416426.vo.msecnd.net/scripts/a/ai.0.js"; u.getElementsByTagName(o)[0].parentNode.appendChild(y); try { t.cookie = u.cookie } catch (p) { } for (t.queue = [], t.version = "1.0", r = ["Event", "Exception", "Metric", "PageView", "Trace", "Dependency"]; r.length;) i("track" + r.pop()); return i("set" + s), i("clear" + s), i(h + a), i(c + a), i(h + v), i(c + v), i("flush"), config.disableExceptionTracking || (r = "onerror", i("_" + r), f = e[r], e[r] = function (config, i, u, e, o) { var s = f && f(config, i, u, e, o); return s !== !0 && t["_" + r](config, i, u, e, o), s }), t }(
+                {
+                    instrumentationKey: "c9298952-fea7-4cb8-a132-9c16886808fa"
+                });
+            window.appInsights = appInsights;
+            appInsights.trackPageView("login.aspx");
+        </script>
+    <link href="https://marcomcentral.app.pti.com/printone/Css/ui-standard.css?w2p_version=17.1.2" type="text/css" rel="stylesheet" media="all" />
+<link href="https://marcomcentral.app.pti.com/printone/Css/site.css?w2p_version=17.1.2" type="text/css" rel="stylesheet" media="all" />
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js" type="text/javascript" language="javascript"></script>
+<script>window.jQuery || document.write('<script src="https://marcomcentral.app.pti.com/printone/Javascripts/jquery-1.7.1.min.js?w2p_version=17.1.2"><\/script>')</script>
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/jquery-noconflict.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/prototype.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+
+<script type="text/javascript" language="javascript">
+  function DebugLog(message) { }
+</script>
+
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/ui-standard.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/quickEdit.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/StringControl.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/jquery.qtip-1.0.0-rc3.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/processingmodal.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/angular.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/bootstrap.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/pti.spa-apps.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+<script src="app/app.module.js?w2p_version=17.1.2" type="text/javascript"></script>
+<script src="app/JobDirect/jobDirect.viewer.module.js?w2p_version=17.1.2" type="text/javascript"></script>
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><link href="/printone/cache/css/css_12354.css?2_18_2014_7_30_11_AM" rel="stylesheet" type="text/css" media="all" /></head>
+
+
+<body  id="PageType01"  >
+    <form name="aspnetForm" method="post" action="./login.aspx?company_id=17351&amp;callback=callback&amp;_=1488383350320" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTkwOTEyNjY2OQ8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBFgJmD2QWBGYPZBYCAgIPFgIeBFRleHQFshM8bGluayBocmVmPSJodHRwczovL21hcmNvbWNlbnRyYWwuYXBwLnB0aS5jb20vcHJpbnRvbmUvQ3NzL3VpLXN0YW5kYXJkLmNzcz93MnBfdmVyc2lvbj0xNy4xLjIiIHR5cGU9InRleHQvY3NzIiByZWw9InN0eWxlc2hlZXQiIG1lZGlhPSJhbGwiIC8+DQo8bGluayBocmVmPSJodHRwczovL21hcmNvbWNlbnRyYWwuYXBwLnB0aS5jb20vcHJpbnRvbmUvQ3NzL3NpdGUuY3NzP3cycF92ZXJzaW9uPTE3LjEuMiIgdHlwZT0idGV4dC9jc3MiIHJlbD0ic3R5bGVzaGVldCIgbWVkaWE9ImFsbCIgLz4NCjxzY3JpcHQgc3JjPSJodHRwczovL2FqYXguYXNwbmV0Y2RuLmNvbS9hamF4L2pRdWVyeS9qcXVlcnktMS43LjEubWluLmpzIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIGxhbmd1YWdlPSJqYXZhc2NyaXB0Ij48L3NjcmlwdD4NCjxzY3JpcHQ+d2luZG93LmpRdWVyeSB8fCBkb2N1bWVudC53cml0ZSgnPHNjcmlwdCBzcmM9Imh0dHBzOi8vbWFyY29tY2VudHJhbC5hcHAucHRpLmNvbS9wcmludG9uZS9KYXZhc2NyaXB0cy9qcXVlcnktMS43LjEubWluLmpzP3cycF92ZXJzaW9uPTE3LjEuMiI+PFwvc2NyaXB0PicpPC9zY3JpcHQ+DQo8c2NyaXB0IHNyYz0iaHR0cHM6Ly9tYXJjb21jZW50cmFsLmFwcC5wdGkuY29tL3ByaW50b25lL0phdmFzY3JpcHRzL2pxdWVyeS1ub2NvbmZsaWN0LmpzP3cycF92ZXJzaW9uPTE3LjEuMiIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBsYW5ndWFnZT0iamF2YXNjcmlwdCI+PC9zY3JpcHQ+DQo8c2NyaXB0IHNyYz0iaHR0cHM6Ly9tYXJjb21jZW50cmFsLmFwcC5wdGkuY29tL3ByaW50b25lL0phdmFzY3JpcHRzL3Byb3RvdHlwZS5qcz93MnBfdmVyc2lvbj0xNy4xLjIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiPjwvc2NyaXB0Pg0KDQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiPg0KICBmdW5jdGlvbiBEZWJ1Z0xvZyhtZXNzYWdlKSB7IH0NCjwvc2NyaXB0Pg0KDQo8c2NyaXB0IHNyYz0iaHR0cHM6Ly9tYXJjb21jZW50cmFsLmFwcC5wdGkuY29tL3ByaW50b25lL0phdmFzY3JpcHRzL3VpLXN0YW5kYXJkLmpzP3cycF92ZXJzaW9uPTE3LjEuMiIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBsYW5ndWFnZT0iamF2YXNjcmlwdCI+PC9zY3JpcHQ+DQo8c2NyaXB0IHNyYz0iaHR0cHM6Ly9tYXJjb21jZW50cmFsLmFwcC5wdGkuY29tL3ByaW50b25lL0phdmFzY3JpcHRzL3F1aWNrRWRpdC5qcz93MnBfdmVyc2lvbj0xNy4xLjIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiPjwvc2NyaXB0Pg0KPHNjcmlwdCBzcmM9Imh0dHBzOi8vbWFyY29tY2VudHJhbC5hcHAucHRpLmNvbS9wcmludG9uZS9KYXZhc2NyaXB0cy9TdHJpbmdDb250cm9sLmpzP3cycF92ZXJzaW9uPTE3LjEuMiIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBsYW5ndWFnZT0iamF2YXNjcmlwdCI+PC9zY3JpcHQ+DQo8c2NyaXB0IHNyYz0iaHR0cHM6Ly9tYXJjb21jZW50cmFsLmFwcC5wdGkuY29tL3ByaW50b25lL0phdmFzY3JpcHRzL2pxdWVyeS5xdGlwLTEuMC4wLXJjMy5qcz93MnBfdmVyc2lvbj0xNy4xLjIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiPjwvc2NyaXB0Pg0KPHNjcmlwdCBzcmM9Imh0dHBzOi8vbWFyY29tY2VudHJhbC5hcHAucHRpLmNvbS9wcmludG9uZS9KYXZhc2NyaXB0cy9wcm9jZXNzaW5nbW9kYWwuanM/dzJwX3ZlcnNpb249MTcuMS4yIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIGxhbmd1YWdlPSJqYXZhc2NyaXB0Ij48L3NjcmlwdD4NCjxzY3JpcHQgc3JjPSJodHRwczovL21hcmNvbWNlbnRyYWwuYXBwLnB0aS5jb20vcHJpbnRvbmUvSmF2YXNjcmlwdHMvYW5ndWxhci5qcz93MnBfdmVyc2lvbj0xNy4xLjIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiPjwvc2NyaXB0Pg0KPHNjcmlwdCBzcmM9Imh0dHBzOi8vbWFyY29tY2VudHJhbC5hcHAucHRpLmNvbS9wcmludG9uZS9KYXZhc2NyaXB0cy9ib290c3RyYXAuanM/dzJwX3ZlcnNpb249MTcuMS4yIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIGxhbmd1YWdlPSJqYXZhc2NyaXB0Ij48L3NjcmlwdD4NCjxzY3JpcHQgc3JjPSJodHRwczovL21hcmNvbWNlbnRyYWwuYXBwLnB0aS5jb20vcHJpbnRvbmUvSmF2YXNjcmlwdHMvcHRpLnNwYS1hcHBzLmpzP3cycF92ZXJzaW9uPTE3LjEuMiIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBsYW5ndWFnZT0iamF2YXNjcmlwdCI+PC9zY3JpcHQ+DQo8c2NyaXB0IHNyYz0iYXBwL2FwcC5tb2R1bGUuanM/dzJwX3ZlcnNpb249MTcuMS4yIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPjwvc2NyaXB0Pg0KPHNjcmlwdCBzcmM9ImFwcC9Kb2JEaXJlY3Qvam9iRGlyZWN0LnZpZXdlci5tb2R1bGUuanM/dzJwX3ZlcnNpb249MTcuMS4yIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPjwvc2NyaXB0Pg0KZAIBD2QWAgIBD2QWBAIJD2QWAmYPZBYCZg8PFgYeC05hdmlnYXRlVXJsBUdodHRwczovL21hcmNvbWNlbnRyYWwuYXBwLnB0aS5jb20vcHJpbnRvbmUvc2lnbnVwLmFzcHg/dWlncm91cF9pZD0yNjcyNx8BBRdDbGljayBoZXJlIHRvIHJlZ2lzdGVyLh4HVmlzaWJsZWdkZAILDw8WBB4OQXJyb3dJbWFnZVR5cGUCAR4KY29tcGFueV9pZALHhwFkFgoCAQ8PZBYCHgxhdXRvY29tcGxldGUFA29mZmQCAw8PZBYCHwYFA29mZmQCCA8PFgQfAgVPaHR0cHM6Ly9tYXJjb21jZW50cmFsLmFwcC5wdGkuY29tL3ByaW50b25lL2ZvcmdvdHBhc3N3b3JkLmFzcHg/dWlncm91cF9pZD0yNjcyNx8DZ2RkAgoPZBYCAgEPZBYCZg8PFgIfA2hkFgICAQ9kFgRmDw8WAh8BBQdFbmdsaXNoZGQCAQ8WAh4Dc3JjBR9+L2ltYWdlcy9wb2ludGVyX2Rvd25fYmxhY2sucG5nZAIMD2QWAmYPFgIfAWVkZCxibBFkmjPGpskE3cXcRtrFNHp+" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+document.__printone = 1;
+// used for manually firing builtin browser events like onchange and onclick
+            // do not include the 'on' prefix of the event name
+            function fireEvent(element, event) {
+                // example usage for manually firing a dropdown's onchange event:
+                // var el = document.getElementById('myDropDown');
+                // fireEvent(el, 'change');
+                if (document.createEvent) {
+                    // dispatch for firefox + others
+                    var evt = document.createEvent('HTMLEvents');
+                    evt.initEvent(event, true, true); // event type,bubbling,cancelable
+                    return !element.dispatchEvent(evt);
+                }
+                else {
+                    // dispatch for IE
+                    var evt = document.createEventObject();
+                    return element.fireEvent('on' + event, evt);
+                }
+            }
+//-->
+</script>
+
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/dropDownMenu.js?w2p_version=17.1.2" type="text/javascript"></script>
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/jquery.shorten.js?w2p_version=17.1.2" type="text/javascript"></script>
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/ui.core.js?w2p_version=17.1.2" type="text/javascript"></script>
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/ui.slider.js?w2p_version=17.1.2" type="text/javascript"></script>
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/jquery.mousewheel.min.js?w2p_version=17.1.2" type="text/javascript"></script><link href="https://marcomcentral.app.pti.com/printone/Css/DropDownMenu.css?w2p_version=17.1.2" type="text/css" rel="stylesheet" media="all" />
+<link href="https://marcomcentral.app.pti.com/printone/Css/jquery.colorbox.css?w2p_version=17.1.2" type="text/css" rel="stylesheet" media="all" />
+<script src="https://marcomcentral.app.pti.com/printone/Javascripts/jquery.colorbox.js?w2p_version=17.1.2" type="text/javascript" language="javascript"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+                    function closeDialog() {
+                        jQuery.fn.colorbox.close();
+                    }
+                    //]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C80F1465" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAATh33i3XvJpevBRzsPbxJ8lm1kvLBmjQ6Xf8/0LwTxnkU+V8F2ZbDGILuRKPLT3vc+Ar8BJrVpBVatKDLt7vqgvMD7D03+XO6yYlM4xuimyoWsUFOU=" />
+</div>
+        
+    <table id="ENUSmain" cellspacing="0" cellpadding="0">
+	    <tr>
+	        <td>
+		        <table id="CtlHead" border="0" cellpadding="0" cellspacing="0">
+		            <thead>
+			            <tr>
+			                <td  class="NavTop">&nbsp;</td>
+                        </tr>
+		            </thead>
+		            <tbody>
+                        <tr>
+                            <td>
+                                <!-- UILayout start: layout_StoreBannerCopy -->
+
+<!-- UILayout end: layout_StoreBannerCopy -->
+
+                            </td>
+                        </tr>
+			            <tr>
+				            <td><img id="ctl00_content_ImageControlHeader" src="https://images.printable.com/printonelogos/images/2220/17351/banners/26727/facebook.png" style="border-width:0px;" /></td>
+			            </tr>
+		            </tbody>
+		        </table>
+		        <div id="CtlLogIn">
+			        <h4><strong><span>Sign In</span></strong></h4>
+			        <!-- UILayout start: layout_LoginCopy -->
+
+<!-- UILayout end: layout_LoginCopy -->
+
+			        <p><a id="ctl00_content_SelfRegLinkSection_SelfRegLinkSectionLayout_lnkSelfReg" href="https://marcomcentral.app.pti.com/printone/signup.aspx?uigroup_id=26727">Click here to register.</a>
+
+</p>
+			        
+
+<script language="javascript" type="text/javascript">
+<!--
+    var invalidCredentialsString = 'Incorrect login id or password.  Please try again.';
+    function ensureValidCredentials() 
+    {
+        var loginEl = document.getElementById("ctl00_content_Login_txtLoginId");
+        var pwdEl = document.getElementById("ctl00_content_Login_txtPassword");
+        if (loginEl && pwdEl) {
+            // alert("loginEl="+loginEl.value+", pwdEl="+pwdEl.value)
+            if (loginEl.value.replace(/^\s*/, "").replace(/\s*$/, "").length == 0
+                || pwdEl.value.replace(/^\s*/, "").replace(/\s*$/, "").length == 0) {
+                alert(invalidCredentialsString);
+                return false;
+            }            
+        }
+        return true;
+    }
+        
+    // capture screen dimensions for logging purposes
+    function getScreenDimensions()
+    {
+        try {
+          $("__width").value = screen.width;
+          $("__height").value = screen.height;
+          var browserDimensions = document.viewport.getDimensions();
+          $("__browserWidth").value = browserDimensions.width;
+          $("__browserHeight").value = browserDimensions.height;
+      } catch (e) { }      
+    }
+    
+    Event.observe(document, 'keypress', function(event) {
+        if (Event.KEY_RETURN == event.keyCode) {
+            Event.stop(event);
+            if (ensureValidCredentials()) {
+                __doPostBack('ctl00$content$Login$btnLogin','');
+            }
+        }
+    });         
+//-->
+</script>
+
+<table class="CtlSearchGroup" cellpadding=0 cellspacing=0>
+	<tbody>
+		<tr>
+			<td class="header"><span id="ctl00_content_Login_Stringcontrol2">User ID</span></td>
+			<td class="content"><input name="ctl00$content$Login$txtLoginId" type="text" id="ctl00_content_Login_txtLoginId" tabindex="1" autocomplete="off" /></td>
+		</tr>
+		<tr>
+			<td class="header"><span id="ctl00_content_Login_Stringcontrol3">Password</span></td>
+			<td class="content"><input name="ctl00$content$Login$txtPassword" type="password" id="ctl00_content_Login_txtPassword" tabindex="2" autocomplete="off" />
+			</td>
+		</tr>
+		<tr>
+		
+			<td class="header">			    
+			</td>
+			<td class="content">			    
+			    
+			    
+			</td>
+		</tr>
+		<tr>
+		    <td class="header">		        
+		    </td>
+		    <td class="content">		    
+		        
+		        
+		    </td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="ButtonRowClearR">	
+    <a id="ctl00_content_Login_btnRecoverPassword" href="https://marcomcentral.app.pti.com/printone/forgotpassword.aspx?uigroup_id=26727">Forgot My Password</a>
+</div>	
+
+<div style="margin:10px; float: right">
+	<a onclick="return&#32;ensureValidCredentials();" id="ctl00_content_Login_btnLogin" tabindex="4" class="pbtn&#32;btn-s&#32;primary" href="javascript:__doPostBack(&#39;ctl00$content$Login$btnLogin&#39;,&#39;&#39;)"><span>Login</span></a>
+</div>	
+
+<div id="ctl00_content_Login_pnlLocaleSelector">
+	
+<div style="margin:10px; float:left">
+    
+
+<style type="text/css">
+.localeDropdown
+{
+    border: 1px solid #BCBEC0;
+    position:absolute;
+    background-color: #FFF;
+    float:right;
+    display:none;
+    z-index:110;
+    padding: 10px 0px 10px 0px;
+}
+.dropdownItemRootText
+{
+    text-align:left;
+}
+.dropdownItemRootText:hover
+{
+    background-color:#EAEAEA;
+}
+.dropdownItemRootText a.dropdownItemTitle:hover
+{
+    color:#0085CF;
+}
+.dropdownItemRootText a.dropdownItemTitle 
+{
+    color: #787878;
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 24px;
+    line-height: 24px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0 0 0 0;
+    padding: 0 15px 0 15px;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    background-position: 98% 8px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+    text-align:left;
+}
+
+.pnlLocale
+{
+    display:inline;
+}
+</style>
+
+
+<script type="text/javascript" language="javascript">
+
+    function handleLocaleClick(warningText) {
+        var DisplayCustomSearchWarning = 'False';
+        if (DisplayCustomSearchWarning == 'True')
+            return confirm(warningText);
+        else
+            return true;
+    }
+</script> 
+
+
+
+</div>
+
+</div>
+
+<p style="width:100%;clear:both; " align="left">
+    <span style="width:100%;background-color:#CC3333; font-weight:bold; color:#FFFFFF; "><strong>
+    <span id="ctl00_content_Login_txtMessage"></span></strong></span>
+</p>
+
+
+
+<!-- start screen resolution form fields -->
+<input type="hidden" name="__width" id="__width" />
+<input type="hidden" name="__height" id="__height" />
+<input type="hidden" name="__browserWidth" id="__browserWidth" />
+<input type="hidden" name="__browserHeight" id="__browserHeight" />
+
+
+<script language="javascript" type="text/javascript">
+<!--
+	try
+	{
+	  if( parent.document != document && parent.document.__printone == 1 )
+		{
+			parent.location = document.location + "&__child=1";
+		}
+		if( window.opener.document.__printone == 1 )
+		{
+			window.opener.location = document.location + "&__popup=1";
+			window.opener.focus();
+			self.close();
+		}
+	}
+	catch(e)
+	{
+	}
+//-->
+</script>
+
+		        </div>
+		        
+<script type="text/javascript">
+    
+    function openAppNotificationModal() {
+        var iFrameUrl = "https://marcomcentral.app.pti.com/printone/AppNotification/AppNotification.aspx";
+
+        var maxWidth = 10000;
+        var maxHeight = 1000;
+        if (typeof (jQuery) !== 'undefined') {
+            var w = parseInt(0.30 * jQuery(window).width());
+            var h = 500;//parseInt(0.80 * jQuery(window).height());
+            if (w > maxWidth)
+                w = maxWidth;
+            if (h > maxHeight)
+                h = maxHeight;
+            iFrameUrl += '?if_w=' + w + '&if_h=' + h;
+        }
+
+        if (!window.pubsub)
+            window.pubsub = {};
+
+        $j(window.pubsub).on('resizeAppNotificationModal', function (e, args) {
+            if (typeof args === 'undefined' || args.width === 'auto' || (typeof args.width === 'undefined' && typeof args.height === 'undefined')) {
+                jQuery.fn.colorbox.resize({ height: 500, width: parseInt(0.30 * jQuery(window).width()) });
+            }
+            else if (typeof args.width !== 'undefined' && args.width > 0) {
+                jQuery.fn.colorbox.resize({ height: args.height + 60, width: args.width });
+            } else {
+                jQuery.fn.colorbox.resize({ height: args.height + 60 });
+            }
+        });
+
+
+        $j(window.pubsub).on('closeAppNotificationModal', function (e, args) {            
+            jQuery.fn.colorbox.close();            
+            if (customListVendor == true) {
+                userTandCAgreement = true;
+                setTimeout(openDataFileFromListVendorModal, 1000);
+            }
+        });
+
+        jQuery.fn.colorbox({ transition: 'fade', speed: '100', width: w, height: h,  iframe: true, href: iFrameUrl, overlayClose: false, escKey: false, closeButton: false, scrollbars: false, opacity: 0.90, title: '', open: true });
+        $j('#cboxClose').hide();
+
+    }
+
+
+
+</script>
+
+
+
+<table id="CtlFooter" cellspacing="0" cellpadding="0" height="100%" width="100%">
+    <tr height="100%">
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td><!-- UILayout start: layout_FooterCopy -->
+<style type=text/css>
+#ENUSmain {
+background: url(http://www.yourdomain.com/yourimage.jpg) repeat-y 0px 100px;
+}
+#CtlFooter {
+width: 100%;
+clear: both;
+background: #FFFFFF;
+}
+</style>
+<!-- UILayout end: layout_FooterCopy -->
+</td>
+    </tr>
+    <tr>
+        <td><div style="text-align:center;">
+
+</div></td>
+    </tr>
+</table>
+<div style="width:100%;">
+<table style="width:100%; position:relative;">
+    <tr>
+        <td id="copyright" style="color: #929292; font-size: 11px; text-align: center;">
+        &copy; 1999 - 2017 PTI Marketing Technologies<sup>&reg;</sup>, MarcomCentral<sup>&reg;</sup>
+        </td>
+    </tr>
+</table>
+</div>
+<div class="FooterBottom">
+    <center>
+        <a href="https://www.securitymetrics.com/site_certificate.adp?i=1290862&amp;s=marcomcentral%2eapp%2epti%2ecom"" target="_blank">
+	        <img id="ctl00_content_FooterLayout_ImageControl1" title="Security&#32;Matrix&#32;Logo" title="Security&#32;Matrix&#32;Logo" src="https://images.printable.com/application/sm_tested3_trans.gif" alt="Security&#32;Matrix&#32;Logo" style="height:42px;width:100px;border-width:0px;" />
+	    </a>
+    </center>
+</div>
+	        </td>
+	    </tr>
+    </table>
+
+
+    
+<script language="javascript" type="text/javascript">
+<!--
+try
+{
+  if( parent.document != document && parent.document.__printone && parent.document.__printone == 1 )
+  {
+    var child = document.createElement('INPUT');
+    child.type = "hidden";
+    child.name = "__child";
+    child.value = "1";
+    document.forms[0].appendChild(child);
+  }
+  if( window.opener.document.__printone && window.opener.document.__printone == 1 )
+  {
+    var popup = document.createElement('INPUT');
+    popup.type = "hidden";
+    popup.name = "__popup";
+    popup.value = "1";
+    document.forms[0].appendChild(popup);
+  }
+}
+catch(e)
+{
+}
+//-->
+</script>
+<script lang='javascript'>var focusElement = document.getElementById('ctl00_content_Login_txtLoginId');focusElement.focus();</script>
+<script type="text/javascript">
+//<![CDATA[
+getScreenDimensions();
+//]]>
+</script>
+</form>
+    
+    
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            
+            <script type="text/javascript">
+            try{ 
+            var pageTracker = _gat._getTracker("UA-3707811-2");
+            pageTracker._trackPageview();
+            } catch(err) {} 
+            </script>
+            
+</body>
+<!-- SDSTR04 -->
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<title>MCC Form Test</title>
+</head>
+<body>
+	<script type='text/javascript'>
+	 $(document).ready(function(){
+		$("#submitButton").click(
+		function(){
+			var user=$('#user').val();
+            var pwd=$('#pass').val();
+            /*
+		    $.ajax({
+		    	type: "POST",
+		    	data:{"user":user,"password":pwd},
+		    	url: "https://marcomcentral.app.pti.com/printone/login.aspx?company_id=17351",
+		    	success: function(result){
+		    		alert(result); },
+		    	fail: function(result){ 
+		    		alert(result); }
+		    }); */
+		    
+		    /*
+		    $.ajax({
+		        type: "GET",
+		        data:{"user":user,"password":pwd},
+		        xhrFields: {
+		            withCredentials: true
+		        },
+		        dataType: "jsonp",
+		        contentType: "application/javascript",
+		        async: false,
+		        crossDomain: true,
+		        url: "https://marcomcentral.app.pti.com/printone/login.aspx?company_id=17351",
+		        success: function (jsonData) {
+		            console.log(jsonData);
+		        },
+		        error: function (request, textStatus, errorThrown) {
+		            console.log(request.responseText);
+		            console.log(textStatus);
+		            console.log(errorThrown);
+		        }
+		    })*/
+			/*
+            $.ajax({
+            	type: "GET",
+                url:"https://marcomcentral.app.pti.com/printone/login.aspx?company_id=17351",
+                dataType: 'jsonp', // Notice! JSONP <-- P (lowercase)
+                success:function(json){
+                    // do stuff with json (in this case an array)
+                    alert("Success");
+                },
+                error:function(result){
+                	$("#response").html(result);
+                	alert(result);
+                }      
+           });
+		   */
+		   /*
+            $.ajax({
+                type: 'GET',
+                url: "https://marcomcentral.app.pti.com/printone/login.aspx?company_id=17351",
+                //processData: true,
+                //data: {},
+                dataType: "json",
+                success:function(data) {
+                	$("#response").html(data);
+                    processData(data);
+                    alert("Succes");
+                },
+                error:function(data) {
+                	$("#response").html(data);
+                	alert("Fail");
+                }      
+     		});
+		   */
+		   
+            $.ajax({
+                url: 'https://marcomcentral.app.pti.com/printone/login.aspx?company_id=17351',
+                type: 'GET',
+                crossDomain: true, // enable this
+                //crossOrigin: true,
+                dataType: 'jsonp',
+                jsonpCallback: 'callback',
+                success: function(data) {
+                    console.log("Success " + data);
+                },
+                error: function(err) {
+                    console.log("Error " + err);
+                }
+            }).then(function(data) {
+                console.log("then " + data);
+            });
+            
+		   
+		   function callback(){
+			   alert("Here");
+		   }
+		   
+		   
+		   
+		})
+	 });
+	 
+     
+    function processData(data){
+      	//alert(data);
+    }
+	</script>
+
+
+    <input class="form-control" id="user" placeholder="Username" name="name" type="text">
+	<input class="form-control" id="pass" placeholder="Password" name="password" type="password" value="">
+    <input class="btn btn-lg btn-success btn-block" id="submitButton" type="submit" value="Login">
+	<div id="response"></div>
+</body>
+</html>
